@@ -1,49 +1,24 @@
-html {
+html 
+{
   box-sizing: border-box;
   font-size: 16px;
 }
 
-:root {
-  --wight: #fff;
-  --main-red: #e0001b;
-  --main-grey: #f8f8f8;
-}
-
 *,
 *::before,
-*::after {
-  box-sizing: inherit;
-}
+*::after {box-sizing: inherit;}
 
-@font-face {
-  font-family: "Open Sans Regular";
-  src: url(../src/fonts/open-sans-regular.woff2) format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Open Sans Bold";
-  src: url(../src/fonts/open-sans-bold.woff2) format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Open Sans SemiBold";
-  src: url(../src/fonts/open-sans-semibold.woff2) format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-
-a {
+a 
+{
   color: inherit;
   text-decoration: none;
+  cursor: pointer;
 }
 
-img {
-  max-width: 100%;
-}
+img {max-width: 100%;}
 
-body {
+body 
+{
   padding: 0;
   margin: 0;
   font-family: "Open Sans Regular", sans-serif;
@@ -53,32 +28,64 @@ body {
   color: #000;
 }
 
-ul,
-li {
+ul, li 
+{
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-p {
+p 
+{
   margin: 0;
   padding: 0;
 }
 
-button {
+button 
+{
   padding: 0;
   margin: 0;
   border: none;
 }
 
-/*===========================================================*/
+/*================ Fonts ===================*/
+@font-face 
+{
+  font-family: "Open Sans Regular";
+  src: url(../src/fonts/open-sans-regular.woff2) format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face 
+{
+  font-family: "Open Sans Bold";
+  src: url(../src/fonts/open-sans-bold.woff2) format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face 
+{
+  font-family: "Open Sans SemiBold";
+  src: url(../src/fonts/open-sans-semibold.woff2) format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*============== Variables ================*/
+:root 
+{
+  --wight: #fff;
+  --main-red: #e0001b;
+  --main-grey: #f8f8f8;
+}
+
+/*===============================================*/
 
 /* ============= Header top ===================== */
 
-a {
-  cursor: pointer;
-}
-.header__top {
+
+.header__top 
+{
   display: flex;
   justify-items: center;
   width: 100%;
@@ -87,18 +94,21 @@ a {
   background-color: var(--main-grey);
 }
 
-.container {
+.container 
+{
   width: 58.3vw;
   margin: auto;
 }
 
-header .container {
+header .container 
+{
   display: flex;
   justify-content: space-between;
   font-size: 0.75em;
 }
 
-.header__top-left {
+.header__top-left 
+{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -106,7 +116,8 @@ header .container {
   padding-right: 20px;
 }
 
-.header__top-left select {
+.header__top-left select 
+{
   border: none;
   background-color: transparent;
   appearance: none;
@@ -118,17 +129,17 @@ header .container {
   font-size: inherit;
 }
 
-header nav {
-  width: 64.5%;
-}
+header nav {width: 64.5%;}
 
-header nav ul {
+header nav ul 
+{
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.header__top-right {
+.header__top-right 
+{
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -136,21 +147,19 @@ header nav ul {
   padding-right: 20px;
 }
 
-.header__location {
+.header__location 
+{
   display: flex;
   align-items: center;
 }
 
-.header__location > svg {
-  margin-left: 4px;
-}
+.header__location > svg {margin-left: 4px;}
 
-.header__location > p {
-  margin-left: 12px;
-}
+.header__location > p {margin-left: 12px;}
 
 /* =================== Header middle ================= */
-.header__middle {
+.header__middle 
+{
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -159,12 +168,14 @@ header nav ul {
   margin-bottom: 1.2vw;
 }
 
-.header__middle > img {
+.header__middle > img 
+{
   height: 50%;
   margin-right: 2.9vw;
 }
 
-.header__middle form {
+.header__middle form 
+{
   display: flex;
   width: 21.46vw;
   /*width: 412px;*/
@@ -176,14 +187,16 @@ header nav ul {
   margin-top: -1.6px;
 }
 
-.header__middle form input {
+.header__middle form input 
+{
   padding-left: 12px;
   height: 100%;
   width: 18.58vw;
   letter-spacing: 1.4px;
 }
 
-.head-search-btn {
+.head-search-btn 
+{
   position: relative;
   height: 100%;
   width: 2.9vw;
@@ -191,7 +204,8 @@ header nav ul {
   background-color: var(--main-red);
 }
 
-.head-search-btn::before {
+.head-search-btn::before 
+{
   content: "";
   position: absolute;
   display: block;
@@ -203,7 +217,9 @@ header nav ul {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.head-search-btn::after {
+
+.head-search-btn::after 
+{
   content: " ";
   position: absolute;
   display: block;
@@ -215,7 +231,8 @@ header nav ul {
   bottom: 12px;
 }
 
-.header__middle nav {
+.header__middle nav 
+{
   width: 24.5vw;
   font-family: "Open Sans SemiBold";
   font-size: 14px;
@@ -226,7 +243,8 @@ header nav ul {
   justify-content: space-between;
 }
 
-.header__favorites a {
+.header__favorites a 
+{
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -237,7 +255,8 @@ header nav ul {
   background-color: var(--main-grey);
 }
 
-.header__favorites span {
+.header__favorites span 
+{
   display: inline-block;
   width: 17px;
   height: 17px;
@@ -248,7 +267,8 @@ header nav ul {
   text-align: center;
 }
 
-.header__scale a {
+.header__scale a 
+{
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -258,7 +278,8 @@ header nav ul {
   background: transparent;
 }
 
-.header__cart a {
+.header__cart a 
+{
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -267,7 +288,8 @@ header nav ul {
   background: transparent;
 }
 
-.header__cart span {
+.header__cart span 
+{
   display: inline-block;
   width: 17px;
   height: 17px;
@@ -279,11 +301,10 @@ header nav ul {
 }
 
 /*================header__bottom==================*/
-.header__bottom {
-  height: 48px;
-}
+.header__bottom {height: 48px;}
 
-.header__burger-btn {
+.header__burger-btn 
+{
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -297,16 +318,16 @@ header nav ul {
   border-bottom-left-radius: 3px;
 }
 
-.header__burger-btn img {
-  opacity: 1;
-}
+.header__burger-btn img {opacity: 1;}
 
-.header__bottom nav {
+.header__bottom nav 
+{
   display: flex;
   width: 100%;
 }
 
-.header__bottom nav ul {
+.header__bottom nav ul 
+{
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -315,11 +336,10 @@ header nav ul {
   font-size: 0.88rem;
 }
 
-.header__bottom nav img {
-  margin-right: 8px;
-}
+.header__bottom nav img {margin-right: 8px;}
 
-.header__bottom li a {
+.header__bottom li a 
+{
   display: flex;
   justify-content: space-between;
   align-items: center;
