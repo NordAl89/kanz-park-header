@@ -19,8 +19,8 @@
                         </svg>
                         <p>Махачкала</p>
                     </div>
-                    <nav>
-                        <ul class="header__ul">
+                    <nav class="navigation"> <!-- Вложенный блок -->
+                        <ul class="navigation__list">
                             <li>
                                 <a href="#">Магазины</a>
                             </li>
@@ -44,27 +44,27 @@
         </div>
         <div class="header__middle container">
             <img src="./src/img/kanz-logo.png" alt="логотип канцпарк">
-            <form>
-                <input type="text" placeholder="Быстрый поиск">
-                <button class="head-search-btn"></button>
+            <form class="form"> <!-- Вложенный блок -->
+                <input class="form__input" type="text" placeholder="Быстрый поиск">
+                <button class="form__btn"></button>
             </form>
-            <nav>
-                <ul>
-                    <li class="header__favorites">
-                        <a href="#">
+            <nav class="navigation"> <!-- Вложенный блок -->
+                <ul class="navigation__list">
+                    <li class="navigation__item">
+                        <a class="navigation__link navigation__link--decor" href="#">
                             <img src="./src/img/lover1.png" alt="favorite image">
                             Избранное
                             <span>0</span>
                         </a>
                     </li>
-                    <li class="header__scale">
-                        <a href="#">
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#">
                             <img src="./src/img/scales.png" alt="scale image">
                             Сравнить
                         </a>
                     </li>
-                    <li class="header__cart">
-                        <a href="#">
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#">
                             <img src="./src/img/shopping-cart1.png" alt="shoping-cart">
                             Корзина
                             <span>0</span>
@@ -82,34 +82,34 @@
                 </svg>
                 Каталог
             </button>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="">
+            <nav class="navigation">
+                <ul class="navigation__list">
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="">
                             <img src="./src/img/agenda.png" alt="бумажная продукция">
                             Бумажная продукция
                         </a>
                     </li>
-                    <li>
-                        <a href="">
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="">
                             <img src="./src/img/briefcase.png" alt="товары для школы">
                             Товары для школы
                         </a>
                     </li>
-                    <li>
-                        <a href="">
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="">
                             <img src="./src/img/stationery.png" alt="товары для творчества">
                             Товары для творчества
                         </a>
                     </li>
-                    <li>
-                        <a href="">
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="">
                             <img src="./src/img/abacus.png" alt="товары для торговли">
                             Товары для торговли
                         </a>
                     </li>
-                    <li>
-                        <a href="">
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="">
                             <img src="./src/img/tag1.png" alt="скидки">
                             Скидки и акции
                         </a>

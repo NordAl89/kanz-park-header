@@ -129,9 +129,9 @@ header .container
   font-size: inherit;
 }
 
-header nav {width: 64.5%;}
+.header__top .navigation {width: 64.5%;}
 
-header nav ul 
+.header__top .navigation__list
 {
   display: flex;
   justify-content: space-between;
@@ -174,7 +174,7 @@ header nav ul
   margin-right: 2.9vw;
 }
 
-.header__middle form 
+.header__middle .form 
 {
   display: flex;
   width: 21.46vw;
@@ -187,7 +187,7 @@ header nav ul
   margin-top: -1.6px;
 }
 
-.header__middle form input 
+.header__middle .form__input
 {
   padding-left: 12px;
   height: 100%;
@@ -195,7 +195,7 @@ header nav ul
   letter-spacing: 1.4px;
 }
 
-.head-search-btn 
+.header__middle .form__btn
 {
   position: relative;
   height: 100%;
@@ -204,7 +204,7 @@ header nav ul
   background-color: var(--main-red);
 }
 
-.head-search-btn::before 
+.header__middle .form__btn::before 
 {
   content: "";
   position: absolute;
@@ -218,7 +218,7 @@ header nav ul
   transform: translate(-50%, -50%);
 }
 
-.head-search-btn::after 
+.header__middle .form__btn::after 
 {
   content: " ";
   position: absolute;
@@ -231,31 +231,38 @@ header nav ul
   bottom: 12px;
 }
 
-.header__middle nav 
+.header__middle .navigation
 {
   width: 24.5vw;
+  height: 2.5vw;
   font-family: "Open Sans SemiBold";
   font-size: 14px;
 }
 
-.header__middle nav ul {
+.header__middle .navigation__list {
   display: flex;
   justify-content: space-between;
-}
+  align-items: center;  
+  }
 
-.header__favorites a 
+.header__middle .navigation__link
 {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  width: 9.5vw;
+  justify-content: space-between;  
   height: 2.5vw;
-  margin-right: 16px;
-  border-radius: 3px;
-  background-color: var(--main-grey);
 }
 
-.header__favorites span 
+ /*вынужденная мера задания отрицательного маргина для соответствия
+ пиксель-перф. Другим решением было бы задание конкретной ширины
+ каждому li. И так как ширина у всех них разная, выбрал этот вариант*/
+.header__middle .navigation__item:nth-child(2) {margin-left: -15px;}
+
+.header__middle .navigation__link img {
+  margin-right: 15px;
+}
+
+.header__middle .navigation__link span 
 {
   display: inline-block;
   width: 17px;
@@ -265,43 +272,17 @@ header nav ul
   padding-top: 1px;
   color: #fff;
   text-align: center;
+  margin-left: 15px;
 }
 
-.header__scale a 
-{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 2.5vw;
-  width: 5.6vw;
-  margin-right: 34px;
-  background: transparent;
-}
-
-.header__cart a 
-{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 2.5vw;
-  width: 6.8vw;
-  background: transparent;
-}
-
-.header__cart span 
-{
-  display: inline-block;
-  width: 17px;
-  height: 17px;
-  background-color: var(--main-red);
-  border-radius: 50%;
-  padding-top: 1px;
-  color: var(--wight);
-  text-align: center;
+.navigation__link--decor {
+  padding: 0 16px 0 16px;
+  border-radius: 3px;
+  background-color: var(--main-grey);
 }
 
 /*================header__bottom==================*/
-.header__bottom {height: 48px;}
+/*.header__bottom {height: 48px;}*/
 
 .header__burger-btn 
 {
@@ -309,6 +290,7 @@ header nav ul
   justify-content: space-evenly;
   align-items: center;
   width: 8.05vw;
+  height: 2.5vw;
   padding-right: 8px;
   color: var(--wight);
   background-color: var(--main-red);
@@ -318,27 +300,27 @@ header nav ul
   border-bottom-left-radius: 3px;
 }
 
-.header__burger-btn img {opacity: 1;}
-
-.header__bottom nav 
-{
-  display: flex;
-  width: 100%;
+.header__bottom .navigation
+{  
+  width: 58.9vw;
+  height: 2.5vw;
 }
 
-.header__bottom nav ul 
+.header__bottom .navigation__list
 {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
+  height: inherit;
   padding: 0 18px 0 23px;
   background-color: var(--main-grey);
   font-size: 0.88rem;
 }
 
-.header__bottom nav img {margin-right: 8px;}
+.header__bottom .navigation img {margin-right: 8px;}
 
-.header__bottom li a 
+.header__bottom .navigation__link
 {
   display: flex;
   justify-content: space-between;
